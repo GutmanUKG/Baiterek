@@ -83,6 +83,10 @@ header{
       display: flex;
       align-items: center;
       gap: 8px;
+      transition: .5s all;
+      &:hover{
+        background: #00b958;
+      }
     }
   }
 }
@@ -138,6 +142,10 @@ header{
         border-radius: 16px;
         background: #fff;
         align-items: center;
+        label{
+          width: 70%;
+          background: transparent;
+        }
         .form_group{
           display: flex;
           align-items: center;
@@ -147,16 +155,23 @@ header{
             padding: 20px;
             border: none;
             outline: none;
-
+            width: 100%;
+            background: transparent;
           }
           input{
             width: 100%;
+            &.search_input{
+              width: 90%;
+
+            }
           }
           label.search_input{
             position: relative;
             display: flex;
             align-items: center;
-            width: 100%;
+            width: 90%;
+            margin-right: 32px;
+            border-right: 1px solid rgba(51, 51, 51, 0.1);
             &:before{
               content: '';
               display: block;
@@ -169,6 +184,9 @@ header{
             position: relative;
             display: flex;
             align-items: center;
+            border-right: 1px solid rgba(51, 51, 51, 0.1);
+            padding-right: 32px;
+            margin-right: 32px;
             &:before{
               content: '';
               display: block;
@@ -198,6 +216,10 @@ header{
             font-size: 16px;
             line-height: 125%;
             color: #fff;
+            transition: .5s all;
+            &:hover{
+              background: #00b958;
+            }
           }
         }
 
@@ -246,6 +268,7 @@ section.tabs_block{
         border-radius: 24px 24px 0 0;
         margin: 0;
         width: max-content;
+        cursor: pointer;
       }
       .tabs_content{
         border-radius: 24px 24px 24px 24px;
@@ -270,6 +293,24 @@ section.tabs_block{
             font-size: 16px;
             line-height: 125%;
             color: rgba(255, 255, 255, 0.5);
+          }
+        }
+        a{
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          color: rgba(255, 255, 255, 0.75);
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          &:after{
+            content: '';
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url("../assets/imgs/icons/link-ico.svg")center/cover no-repeat;
           }
         }
       }
@@ -310,6 +351,13 @@ section.tabs_block{
           background: #00803d;
         }
 
+      }
+
+      &.active{
+        .tabs_content{
+          position: relative;
+          z-index: 1000;
+        }
       }
     }
   }
@@ -472,7 +520,11 @@ section.people{
       line-height: 200%;
       text-align: center;
       color: rgba(51, 51, 51, 0.75);
+      transition: .5s all;
+      cursor: pointer;
       img{
+        object-fit: contain;
+        transition: .5s all;
         border-radius: 240px;
         width: 240px;
         height: 240px;
@@ -487,7 +539,42 @@ section.people{
         line-height: 143%;
         color: #333;
       }
+      .photo{
+        border-radius: 240px;
+        width: 240px;
+        height: 240px;
+        overflow: hidden;
+        background: rgba(19,57,37, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &:before{
+          content: '';
+          display: block;
+          width: 60px;
+          height: 60px;
+          background: url("../assets/imgs/icons/play_ico.svg")center/cover no-repeat;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: .5s all;
+        }
+      }
 
+      &:hover{
+        .photo{
+          &:before{
+            opacity: 1;
+          }
+        }
+        img{
+          transform: scale(1.2);
+          opacity: 0.5;
+        }
+      }
     }
   }
 }
@@ -608,4 +695,9 @@ footer{
     line-height: 171%;
     color: rgba(29, 42, 41, 0.65);
   }
+}
+
+.reset-styles{
+  height: 100vh !important;
+  padding: 0 !important;
 }
