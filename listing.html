@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--  Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--  Fonts  -->
+    <!--  Libs  -->
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <!--  Libs  -->
+
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="./js/script.js"></script>
+
+    <title>Baiterek</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header_row">
+            <a href="/" class="logo">
+                <img src="./assets/imgs/logo.svg" alt="logo">
+                <span>
+                         10 лет
+                    </span>
+            </a>
+            <div class="site_selector">
+                <div class="current_lang">
+                    Рус
+                </div>
+                <div class="list_lang">
+                    Eng
+                </div>
+            </div>
+            <nav class="top_menu">
+                <ul>
+                    <li>
+                        <a href="">
+                            Вакансии
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Компании
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новости
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Блог
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="user_wrapper">
+                <a href="" class="sing_in btn">
+                    Войти
+                </a>
+                <a href="" class="btn create_resume">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 18V6M6 12H18" stroke="white" stroke-width="1.5" />
+                    </svg>
+                    Создать резюме
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="bradcrumbs">
+        <ul>
+            <li>
+                <a href="">Главная</a>
+            </li>
+            <li>
+                <a href="">Вакансии</a>
+            </li>
+        </ul>
+    </div>
+    <h1 class="page_title">Вакансии</h1>
+
+    <div class="row top_filter">
+        <div class="col-8">
+            <form action="">
+                <div class="form_group">
+                <label for="country" class="select_geo">
+                    <select name="country" id="country" class="form-select">
+                        <option value="" disabled selected>
+                            Весь Казахстан
+                        </option>
+                    </select>
+                </label>
+                <label for="company" class="select_job">
+                    <select name="company" id="company" class="form-select">
+                        <option value="" selected disabled>
+                            Все компании
+                        </option>
+                    </select>
+                </label>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <form action="">
+                <div class="form_group">
+                <label for="date">
+                    <select name="date" id="date" class="form-select">
+                        <option value="">По дате</option>
+                    </select>
+                </label>
+                <label for="week">
+                    <select name="week" id="week" class="form-select">
+                        <option value="">За неделю</option>
+                    </select>
+                </label>
+                <label for="is-invalid">
+
+                    <input type="checkbox" class="is-invalid" id="is-invalid">
+                </label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row listing-wrapper">
+        <div class="col-3 listing-filter">
+            <form action="">
+                тут фильтр
+            </form>
+        </div>
+        <div class="col-9 listing-list">
+            <div class="item">
+                <div class="top">
+                    <span >
+                        21.10.2024
+                    </span>
+                    <span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.9987 5.5708C4.85538 5.5708 1.99805 11.9998 1.99805 11.9998C1.99805 11.9998 4.85538 18.4288 11.9987 18.4288C19.142 18.4288 21.9994 11.9998 21.9994 11.9998C21.9994 11.9998 19.142 5.5708 11.9987 5.5708Z" stroke="#333333" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M11.9987 15.5715C13.9713 15.5715 15.5704 13.9724 15.5704 11.9998C15.5704 10.0272 13.9713 8.42813 11.9987 8.42813C10.0261 8.42813 8.42704 10.0272 8.42704 11.9998C8.42704 13.9724 10.0261 15.5715 11.9987 15.5715Z" stroke="#333333" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        349
+                    </span>
+                </div>
+                <h3 class="title">
+                    Слесарь-сантехник Ремонтно-строительная бригада
+                </h3>
+                <p class="prev_text">
+                    Обеспечение исправного состояния, безаварийной и надежной работы обслуживаемых систем центрального отопления, водоснабжения, канализации и водостоков, правильной их эксплуатации, своевременный качественный ремонт.
+                </p>
+                <div class="price">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 8V24C5 24.5304 5.21071 25.0391 5.58579 25.4142C5.96086 25.7893 6.46957 26 7 26H27C27.2652 26 27.5196 25.8946 27.7071 25.7071C27.8946 25.5196 28 25.2652 28 25V11C28 10.7348 27.8946 10.4804 27.7071 10.2929C27.5196 10.1054 27.2652 10 27 10H7C6.46957 10 5.96086 9.78929 5.58579 9.41421C5.21071 9.03914 5 8.53043 5 8ZM5 8C5 7.46957 5.21071 6.96086 5.58579 6.58579C5.96086 6.21071 6.46957 6 7 6H24" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M23.9375 18C23.9375 18.7939 23.2939 19.4375 22.5 19.4375C21.7061 19.4375 21.0625 18.7939 21.0625 18C21.0625 17.2061 21.7061 16.5625 22.5 16.5625C23.2939 16.5625 23.9375 17.2061 23.9375 18Z" fill="#333333" stroke="#333333" stroke-width="0.125" />
+                    </svg>
+                    300 000 – 450 000 ₸
+                </div>
+                <div class="tags-list">
+                    <div class="tag">
+                        Полная занятость
+                    </div>
+                    <div class="tag">
+                        1-3 года
+                    </div>
+                    <div class="tag">
+                        С питанием и ДМС
+                    </div>
+                    <div class="tag">
+                        Гибридный график
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="company">
+                        <h5 class="company_name">
+                            АО «Аграрная кредитная корпорация»
+                        </h5>
+                        <span>
+                            г. Усть-Каменогорск
+                        </span>
+                    </div>
+                    <button class="btn btn_default">
+                        Откликнуться
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="top">
+                    <span >
+                        21.10.2024
+                    </span>
+                    <span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.9987 5.5708C4.85538 5.5708 1.99805 11.9998 1.99805 11.9998C1.99805 11.9998 4.85538 18.4288 11.9987 18.4288C19.142 18.4288 21.9994 11.9998 21.9994 11.9998C21.9994 11.9998 19.142 5.5708 11.9987 5.5708Z" stroke="#333333" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M11.9987 15.5715C13.9713 15.5715 15.5704 13.9724 15.5704 11.9998C15.5704 10.0272 13.9713 8.42813 11.9987 8.42813C10.0261 8.42813 8.42704 10.0272 8.42704 11.9998C8.42704 13.9724 10.0261 15.5715 11.9987 15.5715Z" stroke="#333333" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        349
+                    </span>
+                </div>
+                <h3 class="title">
+                    Слесарь-сантехник Ремонтно-строительная бригада
+                </h3>
+                <p class="prev_text">
+                    Обеспечение исправного состояния, безаварийной и надежной работы обслуживаемых систем центрального отопления, водоснабжения, канализации и водостоков, правильной их эксплуатации, своевременный качественный ремонт.
+                </p>
+                <div class="price">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 8V24C5 24.5304 5.21071 25.0391 5.58579 25.4142C5.96086 25.7893 6.46957 26 7 26H27C27.2652 26 27.5196 25.8946 27.7071 25.7071C27.8946 25.5196 28 25.2652 28 25V11C28 10.7348 27.8946 10.4804 27.7071 10.2929C27.5196 10.1054 27.2652 10 27 10H7C6.46957 10 5.96086 9.78929 5.58579 9.41421C5.21071 9.03914 5 8.53043 5 8ZM5 8C5 7.46957 5.21071 6.96086 5.58579 6.58579C5.96086 6.21071 6.46957 6 7 6H24" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M23.9375 18C23.9375 18.7939 23.2939 19.4375 22.5 19.4375C21.7061 19.4375 21.0625 18.7939 21.0625 18C21.0625 17.2061 21.7061 16.5625 22.5 16.5625C23.2939 16.5625 23.9375 17.2061 23.9375 18Z" fill="#333333" stroke="#333333" stroke-width="0.125" />
+                    </svg>
+                    300 000 – 450 000 ₸
+                </div>
+                <div class="tags-list">
+                    <div class="tag">
+                        Полная занятость
+                    </div>
+                    <div class="tag">
+                        1-3 года
+                    </div>
+                    <div class="tag">
+                        С питанием и ДМС
+                    </div>
+                    <div class="tag">
+                        Гибридный график
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="company">
+                        <h5 class="company_name">
+                            АО «Аграрная кредитная корпорация»
+                        </h5>
+                        <span>
+                            г. Усть-Каменогорск
+                        </span>
+                    </div>
+                    <button class="btn btn_default">
+                        Откликнуться
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a href="" class="btn btn-default--active m-auto">
+        Смотреть еще вакансии
+    </a>
+</div>
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row mb-5">
+            <div class="col-2 item-flex">
+                <h5 class="menu_title">
+                    Личный кабинет
+                </h5>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="">Войти</a>
+                        </li>
+                        <li>
+                            <a href="">Создать резюме</a>
+                        </li>
+                        <li>
+                            <a href="">Отклики</a>
+                        </li>
+                        <li>
+                            <a href="">Сообщения</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/" class="footer_logo">
+                    <img src="./assets/imgs/logo_min.svg" alt="">
+                </a>
+            </div>
+            <div class="col-2">
+                <h5 class="menu_title">
+                    Найти работу
+                </h5>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="">Помощь</a>
+                        </li>
+                        <li>
+                            <a href="">Наши вакансии</a>
+                        </li>
+                        <li>
+                            <a href="">Каталог компаний</a>
+                        </li>
+                        <li>
+                            <a href="">Работа по профессиям</a>
+                        </li>
+                        <li>
+                            <a href="">Работа по регионам</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-2">
+                <h5 class="menu_title">
+                    Новости и статьи
+                </h5>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="">Блог</a>
+                        </li>
+                        <li>
+                            <a href="">Новости</a>
+                        </li>
+                        <li>
+                            <a href="">Полезные статьи</a>
+                        </li>
+                        <li>
+                            <a href="">Истории успеха</a>
+                        </li>
+                        <li>
+                            <a href="">Партнерам</a>
+                        </li>
+                        <li>
+                            <a href="">О холдинге</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <h5 class="menu_title">
+                        Направления
+                    </h5>
+
+                    <div class="col-6">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        Транспорт и логистика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Коммуникации
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Финансовый сектор
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Недвижимость
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Машиностроение
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Закупки
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Благотворительность
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Строительство
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Образование
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        Транспорт и логистика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Коммуникации
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Финансовый сектор
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Недвижимость
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Машиностроение
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Закупки
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Благотворительность
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Строительство
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Образование
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h5 class="menu_title">
+                    Служба поддержки
+                </h5>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="">Часто задаваемые вопросы</a>
+                        </li>
+                        <li>
+                            <a href="">Обращение в службу поддержки</a>
+                        </li>
+                        <li>
+                            <a href="">Статус текущего запроса</a>
+                        </li>
+                        <li>
+                            <a href="">Горячая линия</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row bottom_menu mt-5 pt-5 pb-4">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">
+                            Пользовательское соглашение
+                        </a>
+                        <a href="">
+                            Пользовательское соглашение
+                        </a>
+                        <a href="">
+                            Пользовательское соглашение
+                        </a>
+                        <a href="">
+                            Пользовательское соглашение
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="social_list">
+                <li>
+                    <a href="">
+                        <img src="./assets/imgs/icons/face.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./assets/imgs/icons/face.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./assets/imgs/icons/face.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="row pt-4">
+            <div class="copy">
+                © 2024 АО «НУХ «Байтерек». Все права защищены
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
