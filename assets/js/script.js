@@ -1,9 +1,11 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
+    console.log(42)
     const bannerWrapper = document.querySelector('.banner_wrapper');
 
     let videoBG = document.querySelector('.banner_video')
     videoBG.src = '/assets/video/bg.mov'
+    console.log(videoBG)
     videoBG.addEventListener('loadeddata', ()=>{
         console.log('Видео загружено и готово к воспроизведению');
         createVideoFrame()
@@ -20,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         bannerWrapper.appendChild(videoBG)
         bannerWrapper.appendChild(overlayVideo)
+        videoBG.play()
+        console.log(videoBG)
     }
     let firstSession = true;
     let tabsItems = document.querySelectorAll('.tabs_list .tabs_item');
@@ -172,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-   let people_slider = $('.people_slider').owlCarousel({
+    let people_slider = $('.people_slider').owlCarousel({
         loop:true,
         margin:10,
         nav:false,
